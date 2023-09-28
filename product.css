@@ -1,0 +1,598 @@
+.group-child {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    right: 0%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    height: 205px;
+    object-fit: cover;
+}
+
+.product {
+    position: relative;
+    display: inline-block;
+    width: 201px;
+    height: 45px;
+    flex-shrink: 0;
+}
+
+.frame-child {
+    position: relative;
+    background-color: #fff;
+    border-top: 1px solid #fff;
+    box-sizing: border-box;
+    width: 51px;
+    height: 1px;
+}
+
+.about-us {
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+    display: inline-block;
+    width: 228px;
+}
+
+.product-parent {
+    position: absolute;
+    width: 15.83%;
+    top: 22px;
+    right: 42.08%;
+    left: 42.08%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 32px;
+}
+
+.rectangle-parent {
+    position: absolute;
+    width: 100%;
+    top: 82px;
+    right: 0%;
+    left: 0%;
+    height: 205px;
+}
+
+.group-item {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    right: 0%;
+    left: 0%;
+    border-radius: 10px;
+    background-color: #d9d9d9;
+    height: 493px;
+}
+
+.group-inner {
+    position: absolute;
+    width: 101.33%;
+    top: 0px;
+    right: -0.67%;
+    left: -0.67%;
+    border-radius: 10px;
+    max-width: 100%;
+    overflow: hidden;
+    height: 501px;
+    object-fit: cover;
+}
+
+.rectangle-group {
+    position: absolute;
+    width: 41.64%;
+    top: 391px;
+    right: 5.86%;
+    left: 52.5%;
+    height: 493px;
+}
+
+.location-sempayau {
+    margin: 0;
+}
+
+.location-sempayau-container {
+    position: relative;
+    display: inline-block;
+    width: 535px;
+}
+
+.frame-item {
+    position: relative;
+    border-radius: 15px;
+    background-color: #438c01;
+    width: 550px;
+    height: 9px;
+}
+
+.specification-of-coal-container {
+    position: relative;
+}
+
+.location-sempayau-east-kuta-parent {
+    position: absolute;
+    top: 391px;
+    left: 85px;
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 26px;
+    font-size: 24px;
+    color: #000;
+}
+
+.frame-inner {
+    position: relative;
+    width: 193px;
+    height: 82px;
+    object-fit: cover;
+}
+
+.home {
+    position: relative;
+    font-weight: 600;
+}
+
+.home-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.login-wrapper {
+    border-radius: 15px;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 28px;
+    color: #66bf15;
+}
+
+.frame-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 50px 0px 0px;
+    gap: 47px;
+}
+
+.rectangle-container {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: #66bf15;
+    height: 82px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.rectangle-div {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    right: 0%;
+    left: 0%;
+    background-color: #438c01;
+    height: 477px;
+}
+
+.rectangle-icon {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    right: 0%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    height: 97.12px;
+    object-fit: cover;
+}
+
+.rectangle-wrapper {
+    position: absolute;
+    width: 17.64%;
+    top: 70px;
+    right: 73.82%;
+    left: 8.54%;
+    height: 97.12px;
+}
+
+.material-symbolscall-sharp-icon {
+    position: absolute;
+    width: 16.81%;
+    top: 8px;
+    right: 83.19%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    height: 45px;
+}
+
+.clarityemail-solid-icon {
+    position: absolute;
+    width: 16.81%;
+    top: 101px;
+    right: 83.19%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    height: 45px;
+}
+
+.div {
+    position: absolute;
+    top: 0px;
+    right: 6px;
+    font-weight: 600;
+    display: inline-block;
+    width: 140px;
+    height: 18px;
+}
+
+.div1 {
+    position: absolute;
+    top: 35px;
+    right: 0px;
+    font-weight: 600;
+    display: inline-block;
+    width: 146px;
+    height: 18px;
+}
+
+.parent {
+    position: absolute;
+    top: 0px;
+    right: 24px;
+    width: 146px;
+    height: 53px;
+}
+
+.nugie-geologistlgicokr {
+    position: absolute;
+    top: 0px;
+    right: 19px;
+    font-weight: 600;
+    display: inline-block;
+    width: 151px;
+    height: 15px;
+}
+
+.nugie-geologistptgamcom {
+    position: absolute;
+    top: 24px;
+    right: 0px;
+    font-weight: 600;
+    display: inline-block;
+    width: 170px;
+    height: 15px;
+}
+
+.nugie-geologistlgicokr-parent {
+    position: absolute;
+    top: 104px;
+    right: 0px;
+    width: 170px;
+    height: 39px;
+    font-size: 12px;
+}
+
+.material-symbolscall-sharp-parent {
+    position: absolute;
+    width: 16.11%;
+    top: 194px;
+    right: 75.35%;
+    left: 8.54%;
+    height: 146px;
+    font-size: 15px;
+}
+
+.frame-child1 {
+    position: relative;
+    width: 87px;
+    height: 87px;
+    object-fit: cover;
+}
+
+.pacific-century-place-container {
+    position: relative;
+    font-weight: 600;
+    display: inline-block;
+    width: 133px;
+    height: 78px;
+    flex-shrink: 0;
+}
+
+.frame-div {
+    position: absolute;
+    top: 118px;
+    right: 186.53px;
+    width: 224.82px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 17px;
+    margin-right: 9px;
+}
+
+.jakarta-office {
+    position: absolute;
+    top: 70px;
+    right: 247.44px;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: Poppins;
+    display: inline-block;
+    width: 182px;
+    height: 24px;
+}
+
+.mine-site {
+    position: absolute;
+    top: 277px;
+    right: 318.44px;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: Poppins;
+    display: inline-block;
+    width: 103px;
+    height: 23px;
+}
+
+.vv9fvh-sempayau-kec {
+    position: relative;
+    font-weight: 600;
+    display: inline-block;
+    width: 129px;
+    height: 42px;
+    flex-shrink: 0;
+}
+
+.rectangle-parent1 {
+    position: absolute;
+    top: 321px;
+    right: 196.97px;
+    width: 221.03px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 17px;
+}
+
+.our-partner {
+    position: absolute;
+    top: 48px;
+    right: 12.17px;
+    left: px;
+    font-weight: 600;
+    display: inline-block;
+    width: 101.35px;
+    height: 17px;
+}
+
+.partner {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: Poppins;
+    display: inline-block;
+    width: 108.52px;
+    height: 26px;
+}
+
+.our-partner-parent {
+    position: absolute;
+    top: 277px;
+    right: 805px;
+    width: 113.52px;
+    height: 65px;
+    font-size: 14px;
+}
+
+.contact-us1 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-weight: 600;
+    display: inline-block;
+    width: 140.29px;
+    height: 24px;
+}
+
+.contact-us2 {
+    position: absolute;
+    top: 49px;
+    right: 51.33px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Inter;
+    display: inline-block;
+    width: 96.97px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.contact-us-parent {
+    position: absolute;
+    top: 277px;
+    right: 519px;
+    width: 148.29px;
+    height: 66px;
+    font-size: 24px;
+    font-family: Poppins;
+}
+
+.about-us2 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: Poppins;
+    display: inline-block;
+    width: 113px;
+    height: 24px;
+}
+
+.history {
+    position: absolute;
+    top: 48px;
+    right: 41px;
+    font-weight: 600;
+    display: inline-block;
+    width: 72px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.visi-misi {
+    position: absolute;
+    top: 76px;
+    right: 22px;
+    font-weight: 600;
+    display: inline-block;
+    width: 91px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.produk {
+    position: absolute;
+    top: 104px;
+    right: 41px;
+    font-weight: 600;
+    display: inline-block;
+    width: 72px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.gallery {
+    position: absolute;
+    top: 132px;
+    right: 44px;
+    font-weight: 600;
+    display: inline-block;
+    width: 69px;
+    height: 17px;
+}
+
+.about-us-parent {
+    position: absolute;
+    top: 2px;
+    right: 234px;
+    width: 113px;
+    height: 149px;
+}
+
+.sitemap {
+    position: absolute;
+    top: 0px;
+    right: 4px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: Poppins;
+    display: inline-block;
+    width: 104px;
+    height: 22px;
+}
+
+.home1 {
+    position: absolute;
+    top: 50px;
+    right: 36px;
+    font-weight: 600;
+    display: inline-block;
+    width: 64px;
+    height: 17px;
+}
+
+.about-us3 {
+    position: absolute;
+    top: 78px;
+    right: 18px;
+    font-weight: 600;
+    display: inline-block;
+    width: 82px;
+    height: 17px;
+}
+
+.our-partner1 {
+    position: absolute;
+    top: 106px;
+    right: 0px;
+    font-weight: 600;
+    display: inline-block;
+    width: 100px;
+    height: 17px;
+}
+
+.contact-us3 {
+    position: absolute;
+    top: 134px;
+    right: 5px;
+    font-weight: 600;
+    display: inline-block;
+    width: 95px;
+    height: 17px;
+}
+
+.group-wrapper {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 108px;
+    height: 151px;
+}
+
+.group-parent {
+    position: absolute;
+    top: 68px;
+    right: 567px;
+    width: 347px;
+    height: 151px;
+    font-size: 14px;
+}
+
+.group-div {
+    position: absolute;
+    width: 100%;
+    top: 988px;
+    right: 0%;
+    left: 0%;
+    height: 477px;
+    font-size: 9px;
+    color: #000;
+    font-family: Inter;
+}
+
+.about-us-product {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 1465px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 41px;
+    color: #fff;
+    font-family: Poppins;
+}
