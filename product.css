@@ -138,6 +138,12 @@
     font-weight: 600;
 }
 
+.home:hover {
+    color: #000;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+}
+
 .home-wrapper {
     display: flex;
     flex-direction: row;
