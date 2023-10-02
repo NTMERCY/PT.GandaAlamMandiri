@@ -63,7 +63,7 @@
     left: 1.11%;
     max-width: 100%;
     overflow: hidden;
-    height: 600px;
+    height: 638px;
     object-fit: cover;
 }
 
@@ -131,7 +131,7 @@
     position: absolute;
     top: 1000px;
     left: calc(50% + 55px);
-    font-size: 24px;
+    font-size: 22px;
     display: inline-block;
     width: 569px;
     font-family: Inter;
