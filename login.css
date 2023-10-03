@@ -12,6 +12,7 @@
     font-size: 32px;
     line-height: 48px;
     color:#66bf15;
+    margin-left: 19vh;
 }
 
 .header p{
@@ -56,4 +57,5 @@
     border: none;
     border-radius: 8px;
     color: #ffffff;
+    margin-top: 40px;
 }
