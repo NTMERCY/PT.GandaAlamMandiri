@@ -1,3 +1,9 @@
+*  {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
 .group-child {
     position: absolute;
     width: 100%;
@@ -9,6 +15,62 @@
     overflow: hidden;
     height: 544px;
     object-fit: cover;
+}
+
+.container-contact-us {
+    margin: 50px auto;
+    padding: 40px;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+    margin-top: 750px;
+    
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+}
+
+label {
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+input[type="submit"]:hover {
+    background-color: #0066cc;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+    align-items: center;
 }
 
 .contact-us-inner {
@@ -304,10 +366,18 @@
     height: 82px;
     object-fit: cover;
 }
-
+.contact-us .frame-div div a{
+    text-decoration: none;
+    color: white;
+}
 .home {
     position: relative;
     font-weight: 600;
+}
+.home:hover {
+    color: #000;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
 }
 
 .home-wrapper {
@@ -330,6 +400,10 @@
     color: #66bf15;
 }
 
+.login-teks{
+    color: #66bf15;
+}
+
 .frame-parent {
     display: flex;
     flex-direction: row;
@@ -340,7 +414,8 @@
 }
 
 .frame-div {
-    position: absolute;
+    position: fixed;
+    z-index: 100;
     width: 100%;
     top: 0px;
     right: 0px;

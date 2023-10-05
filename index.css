@@ -10,6 +10,11 @@
     font-weight: 600;
 }
 
+.desktop-3 .rectangle-parent div a {
+    text-decoration: none;
+    color: white;
+}
+
 .home:hover {
     color: #000;
     transition: all ease-in-out .3s;
@@ -26,7 +31,7 @@
 
 .login-wrapper {
     border-radius: 15px;
-    background-color: #fff;
+    background-color: white;
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -36,6 +41,10 @@
     color: #66bf15;
 }
 
+.login-teks {
+    color: #66bf15;
+}
+ 
 .frame-parent {
     display: flex;
     flex-direction: row;
@@ -46,7 +55,8 @@
 }
 
 .rectangle-parent {
-    position: absolute;
+    position: fixed;
+    z-index: 100;
     width: 100%;
     top: 0px;
     right: 0px;
@@ -153,6 +163,7 @@
     overflow: hidden;
     height: 377px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .group-78-button-child {
@@ -176,6 +187,12 @@
     width: 100px;
     cursor: pointer;
     margin-top: 15px;
+    color: white;
+}
+
+.read-more:hover {
+    transition: all ease-in-out .3s;
+    color: #000;
 }
 
 .group-78-button {
