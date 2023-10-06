@@ -1,3 +1,7 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
 .frame-child {
     position: relative;
     width: 193px;
@@ -20,6 +24,45 @@
     transition: all ease-in-out .3s;
     cursor: pointer;
 }
+
+/* Style the dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #66bf15;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Style the links within the dropdown */
+.dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    color: #000;
+}
+
 
 .home-wrapper {
     display: flex;
@@ -484,6 +527,7 @@
     justify-content: flex-start;
     gap: 17px;
     margin-right: 9px;
+    font-size: 8px;
 }
 
 .jakarta-office {

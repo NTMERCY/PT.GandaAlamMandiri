@@ -1,0 +1,80 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Use the "Poppins" font */
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Style the navbar */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-logo {
+    margin-left: 20px; /* Mengisi pojok kiri */
+    max-height: 50px; /* Menyesuaikan tinggi logo */
+        
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin: 0 20px;
+}
+
+.navbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Style the dropdown menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Style the login button */
+.btn-login {
+    background-color: #f39c12;
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #e67e22;
+}
