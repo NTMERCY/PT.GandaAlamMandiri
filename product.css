@@ -174,7 +174,8 @@
 }
 
 .rectangle-container {
-    position: absolute;
+    position: fixed;
+    z-index: 100;
     width: 100%;
     top: 0px;
     right: 0px;
@@ -186,6 +187,56 @@
     align-items: center;
     justify-content: space-between;
     font-size: 20px;
+}
+
+/* Style the dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #66bf15;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Style the links within the dropdown */
+.dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    color: #000;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+}
+/* Dropdown done */
+
+.rectangle-container div a {
+    text-decoration: none;
+    color: white;
+}
+
+.login-teks {
+    color: #66bf15;
 }
 
 .rectangle-div {

@@ -14,7 +14,7 @@
     font-weight: 600;
 }
 
-.desktop-3 .rectangle-parent div a {
+.rectangle-parent div a {
     text-decoration: none;
     color: white;
 }
@@ -24,6 +24,7 @@
     transition: all ease-in-out .3s;
     cursor: pointer;
 }
+
 
 /* Style the dropdown */
 .dropdown {
@@ -61,7 +62,10 @@
 
 .dropdown-content a:hover {
     color: #000;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
 }
+/* Dropdown done */
 
 
 .home-wrapper {

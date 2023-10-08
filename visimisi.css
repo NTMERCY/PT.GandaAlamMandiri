@@ -194,11 +194,38 @@
     height: 184px;
 }
 
+.rectangle-group {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: #66bf15;
+    height: 82px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    color: #fff;
+    font-family: Poppins;
+}
+
 .frame-item {
     position: relative;
     width: 193px;
     height: 82px;
     object-fit: cover;
+}
+
+.frame-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 50px 0px 0px;
+    gap: 47px;
 }
 
 .home {
@@ -220,6 +247,56 @@
     padding: 10px;
 }
 
+.login-teks {
+    color: #66bf15;
+}
+
+/* Style the dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #66bf15;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Style the links within the dropdown */
+.dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    color: #000;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+} 
+/* Dropdown done */
+
+.rectangle-group div a {
+    text-decoration: none;
+    color: white;
+}
+
 .login-wrapper {
     border-radius: 15px;
     background-color: #fff;
@@ -230,32 +307,6 @@
     justify-content: center;
     padding: 9px 28px;
     color: #66bf15;
-}
-
-.frame-parent {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0px 50px 0px 0px;
-    gap: 47px;
-}
-
-.rectangle-group {
-    position: absolute;
-    width: 100%;
-    top: 0px;
-    right: 0px;
-    left: 0px;
-    background-color: #66bf15;
-    height: 82px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 20px;
-    color: #fff;
-    font-family: Poppins;
 }
 
 .group-item {
