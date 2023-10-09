@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PT.GAM</title>
+    <link rel="shortcut icon" href="assets (4)/favicon-removebg-preview.png" type="image/x-icon">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" />
@@ -14,7 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 
 <body>
@@ -47,7 +49,8 @@
                     </a>
                 </div>
             </div>
-        </nav>        
+        </nav>
+
         <div class="desktop-3-child">
             <div id="carouselExampleFade" class="carousel slide carousel-fade">
                 <div class="carousel-inner">
@@ -74,13 +77,14 @@
             </div>
         </div>
 
-        <div class="about-us-parent">
+        <div class="about-us-parent" data-aos="fade-up" data-aos-duration="1500">
             <div class="about-us1">About us</div>
             <div class="frame-item">
             </div>
         </div>
-        <div class="history-of-ptganda">History of PT.Ganda Alam Makmur</div>
-        <div class="ptganda-alam-makmur-container">
+        <div class="history-of-ptganda" data-aos="fade-up" data-aos-duration="1700">History of PT.Ganda Alam Makmur
+        </div>
+        <div class="ptganda-alam-makmur-container" data-aos="fade-up" data-aos-duration="1750">
             <p class="ptganda-alam-makmur-pt-gam">
                 <span class="ptganda-alam-makmur">PT.Ganda Alam Makmur (PT GAM)</span>
                 <span class="span"> </span>
@@ -93,34 +97,43 @@
             <p class="holding-a-foreign">operation between LX International and PT Titan</p>
             <p class="holding-a-foreign">Mining Indonesia which is engaged in coal mining.</p>
         </div>
-        <img class="desktop-3-item" alt="" src="drive-download-20230910T075804Z-001/asset 1.png">
+        <img class="desktop-3-item" data-aos="fade-up" data-aos-duration="1900" alt=""
+            src="drive-download-20230910T075804Z-001/asset 1.png">
 
-        <div class="group-78-button">
+        <div class="group-78-button" data-aos="fade-up" data-aos-duration="1800">
             <div class="group-78-button-child" id="rectangle1">
             </div>
             <a href="history.html#history2">
                 <div class="read-more" id="readMoreText">Read more</div>
             </a>
         </div>
-        <div class="galery-of-pt-ganda-alam-makmur-parent">
+        <div class="galery-of-pt-ganda-alam-makmur-parent" data-aos="fade-up" data-aos-duration="1700">
             <div class="galery-of-pt">Galery of PT Ganda Alam Makmur </div>
             <div class="frame-inner">
             </div>
         </div>
-        <div class="rectangle-group">
+        <div class="rectangle-group" data-aos="fade-up" data-aos-duration="1900">
             <img class="group-child" alt="" src="drive-download-20230910T075804Z-001/asset 2.png">
             <img class="group-item" alt="" src="drive-download-20230910T075804Z-001/asset 4.jpeg">
             <img class="group-inner" alt="" src="drive-download-20230910T075804Z-001/asset 5.jpeg">
             <img class="rectangle-icon" alt="" src="drive-download-20230910T075804Z-001/asset 6.jpeg">
         </div>
-        <div class="our-partner-parent">
+        <div class="our-partner-parent" data-aos="fade-up" data-aos-duration="1000">
             <div class="our-partner">Our partner</div>
             <div class="frame-item">
             </div>
         </div>
-        <div class="desktop-3-inner">
-            <img class="group-child1" alt="" src="drive-download-20230910T075804Z-001/asset 8.jpeg">
-
+        <div class="desktop-3-inner logos">
+            <div class="logos-slide">
+                <img src="drive-download-20230910T075804Z-001/logo-pt-samudra-maju-perkasa.png">
+                <img src="drive-download-20230910T075804Z-001/Lowongan Kerja Kaltim PT Borneo Mitra Jaya.png">
+                <img src="drive-download-20230910T075804Z-001/MNK.png">
+                <img src="drive-download-20230910T075804Z-001/hijau-transformed.png">
+                <img src="drive-download-20230910T075804Z-001/mum.png">
+                <img
+                    src="drive-download-20230910T075804Z-001/Lowongan Kerja Kaltim PT Graha Prima Energi (GPE) September 2021.jpg">
+                <img src="drive-download-20230910T075804Z-001/andi-transformed.png">
+            </div>
         </div>
         <div class="rectangle-container">
             <div class="group-child2">
@@ -242,6 +255,16 @@
                 // Add your code here
             });
         }
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        var copy = document.querySelector(".logos-slide").cloneNode(true);
+        document.querySelector(".logos").appendChild(copy);
     </script>
 
 </body>

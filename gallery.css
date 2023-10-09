@@ -120,6 +120,7 @@
     overflow: hidden;
     height: 205px;
     object-fit: cover;
+    filter: grayscale(50%);
 }
 
 .gallery {

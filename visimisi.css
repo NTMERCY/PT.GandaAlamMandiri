@@ -8,6 +8,7 @@
     overflow: hidden;
     height: 205px;
     object-fit: cover;
+    filter: grayscale(40%);
 }
 
 .vision-and-mission {
