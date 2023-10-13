@@ -13,8 +13,27 @@ def home():
 
 @app.route('/history')
 def history():
-    return render_template('templates/history.html')
+    return render_template('history.html')
 
+@app.route('/visimisi')
+def visimisi():
+    return render_template('visimisi.html')
+
+@app.route('/product')
+def product():
+    return render_template('product.html')
+
+@app.route('/gallery')
+def gallery():
+    return render_template('gallery.html')
+
+@app.route('/contactus')
+def contactus():
+    return render_template('contact.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
 
 
 
