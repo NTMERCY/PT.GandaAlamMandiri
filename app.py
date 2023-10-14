@@ -35,6 +35,26 @@ def contactus():
 def login():
     return render_template('login.html')
 
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
+
+@app.route('/edit')
+def edit():
+    return render_template('editdata.html')
+
+@app.route('/tabel')
+def tabel():
+    return render_template('tabel.html')
+
+@app.route('/pesan')
+def pesan():
+    return render_template('pesan.html')
+
+@app.route('/tambahdata')
+def tambahdata():
+    return render_template('tambahdata.html')
+
 
 
 

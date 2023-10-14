@@ -756,6 +756,11 @@ form {
     cursor: pointer;
 }
 
+.history1 {
+    text-decoration: none;
+    color: #000;
+}
+
 .visi-misi {
     position: absolute;
     top: 76px;
@@ -794,6 +799,8 @@ form {
     right: 234px;
     width: 113px;
     height: 149px;
+    text-decoration: none;
+    color: #000;
 }
 
 .sitemap {

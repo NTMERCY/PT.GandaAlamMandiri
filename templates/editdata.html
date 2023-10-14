@@ -9,21 +9,44 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+    </script>
+
+
+     <!-- <script> 
+        function edit(){
+            let image=$('#image').val()
+            let nama=$('#nama').val()
+            
+            $.ajak({
+                type:'POST',
+                url:'/edit',
+                data:{
+                    image_give:image,
+                    nama_give:nama,
+                },
+                success:function{response}{
+                    alert(response.msg)
+                    window.location.href ='/'
+                }
+            })
+        }
+    </script>
+-->
 </head>
 
 <body>
-
     <div class="sidebar">
         <div class="logo"></div>
         <ul class="menu">
-            <li class="active">
+            <li>
                 <a href="/dashboard">
                     <i class="fas fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
-            <li>
+            <li class="active">
                 <a href="/tabel">
                     <i class="fas fa-tachometer-alt"></i>
                     <span>Tambah Data</span>
@@ -43,50 +66,38 @@
             </li>
         </ul>
     </div>
-
     <div class="main-content">
         <div class="header-wrapper">
             <div class="header-title">
                 <span>PT Ganda Alam Makmur</span>
-                <h2>Dashboard</h2>
+                <h2>Edit data</h2>
             </div>
         </div>
         <div class="apa">
             <ol class="breadcrumb" style="text-decoration: none;">
                 <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
-                <li class="breadcrumb-item active">New Data</li>
+                <li class="breadcrumb-item active">Edit Data</li>
             </ol>
         </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-                <div class="card">
-                    <img src="https://cdn1-production-images-kly.akamaized.net/on3wzRnO7Y6nWU2u8UlcepDRv7M=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4523494/original/048992400_1690978709-SVOD_-_Spongebob_Squarepants_-_Alt_3_-_Thumbnail.jpg"
-                        class="card-img-top" alt="...">
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://cdn1-production-images-kly.akamaized.net/on3wzRnO7Y6nWU2u8UlcepDRv7M=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4523494/original/048992400_1690978709-SVOD_-_Spongebob_Squarepants_-_Alt_3_-_Thumbnail.jpg"
-                        class="card-img-top" alt="...">
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://cdn1-production-images-kly.akamaized.net/on3wzRnO7Y6nWU2u8UlcepDRv7M=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4523494/original/048992400_1690978709-SVOD_-_Spongebob_Squarepants_-_Alt_3_-_Thumbnail.jpg"
-                        class="card-img-top" alt="...">
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://cdn1-production-images-kly.akamaized.net/on3wzRnO7Y6nWU2u8UlcepDRv7M=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4523494/original/048992400_1690978709-SVOD_-_Spongebob_Squarepants_-_Alt_3_-_Thumbnail.jpg"
-                        class="card-img-top" alt="...">
+        <div class="card border-0 shadow mb-4 ">
+            <div class="card-body mt-4">
+                <div class="table-responsive">
+                    <form action="" method="post">
+                        <div class="mb-3">
+                            <label for="formFileMultiple" class="form-label">Massukan Gambar :</label>
+                            <input class="form-control" type="file" accept=".png,.jpg,.jpeg" value="{{data[0]['image']}}" name="image"
+                                placeholder="Enter the Image" id="image" required />
+                        </div>
+                        <br>
+                        <div class="mb-3 ">
+                            <button type="submit" onclick="edit()" class="btn btn-success" style="margin-left: 90%;">Submit</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    
-
-
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
         </script>
