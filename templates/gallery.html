@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
 
 </head>
 
@@ -57,20 +60,24 @@
                 <div class="about-us1">About us / Gallery</div>
             </div>
         </div>
-        <div class="slider-galeri">
-            <img class="slider-galeri-child" alt="" src="../static/assets (4)/drive-download-20230910T075804Z-001/asset 1.png">
-            <img class="slider-galeri-item" alt="" src="../static/assets (4)/drive-download-20230910T075804Z-001/asset 2.png">
-            <img class="slider-galeri-inner" alt="" src="../static/assets (4)/drive-download-20230910T075804Z-001/asset 3.png">
-            <img class="rectangle-icon" alt="" src="../static/assets (4)/drive-download-20230910T075804Z-001/asset 4.jpeg">
 
+        <div class="container" style="margin-top: 350px;">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                {% for def in data%} {% set file= def.file%}
+                <div class="col">
+                    <div class="card rounded-4">
+                        <img src="../static/{{file}}" height="350px" class="object-fit-cover rounded-4 card-img-top">
+                    </div>
+                </div>
+                
+                <!-- <div class="popup-img">
+                    <span>&times;</span>
+                    <img src="../static/{{file}}" alt="">
+                </div> -->
+                {% endfor %}
+            </div>
         </div>
-        <div class="slider-galeri1">
-            <img class="slider-galeri-child" alt="" src="../static/assets (4)/drive-download-20230910T075804Z-001/asset 5.jpeg">
-            <img class="slider-galeri-item" alt="" src="../static/assets (4)/drive-download-20230910T075804Z-001/asset 6.jpeg">
-            <img class="slider-galeri-inner" alt="" src="../static/assets (4)/drive-download-20230910T075804Z-001/asset 7.jpeg">
-            <img class="rectangle-icon" alt="" src="../static/assets (4)/img/Rectangle 55.png">
 
-        </div>
         <div class="rectangle-container">
             <div class="group-item">
             </div>
@@ -95,7 +102,8 @@
                 </div>
             </div>
             <div class="frame-div">
-                <img class="frame-inner" alt="" src="../static/assets (4)/drive-download-20230910T075804Z-001/asset 9.png">
+                <img class="frame-inner" alt=""
+                    src="../static/assets (4)/drive-download-20230910T075804Z-001/asset 9.png">
 
                 <div class="pacific-century-place-container">
                     <p class="pacific-century-place">Pacific Century Place ID-</p>
@@ -110,7 +118,8 @@
             <div class="jakarta-office">JAKARTA OFFICE</div>
             <div class="mine-site">MINE SITE</div>
             <div class="rectangle-parent1">
-                <img class="frame-inner" alt="" src="../static/assets (4)/drive-download-20230910T075804Z-001/asset 10.png">
+                <img class="frame-inner" alt=""
+                    src="../static/assets (4)/drive-download-20230910T075804Z-001/asset 10.png">
 
                 <div class="vv9fvh-sempayau-kec">4VV9+FVH, Sempayau, Kec. Sangkulirang, Kabupaten Kutai Timur,
                     Kalimantan Timur 75684</div>
@@ -145,6 +154,9 @@
     </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 
 
     <script>

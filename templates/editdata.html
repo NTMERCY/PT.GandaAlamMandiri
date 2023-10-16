@@ -15,26 +15,28 @@
     </script>
 
 
-     <!-- <script> 
-        function edit(){
-            let image=$('#image').val()
-            let nama=$('#nama').val()
-            
-            $.ajak({
-                type:'POST',
-                url:'/edit',
-                data:{
-                    image_give:image,
-                    nama_give:nama,
-                },
-                success:function{response}{
-                    alert(response.msg)
-                    window.location.href ='/'
-                }
-            })
-        }
-    </script>
--->
+<script>
+    function edit() {
+        let id = $('#_id').val();
+        let file = $("#image").prop("files")[0];
+
+        let form_data = new FormData();
+        form_data.append("id_give", id)
+        form_data.append("file_give", file);
+
+        $.ajax({
+            type: "POST",
+            url: "/editdata",
+            data: form_data,
+            contentType: false,
+            processData: false,
+            success: function (response) {
+                window.location.href = '/tabel';
+            },
+        });
+    }
+
+</script>
 </head>
 
 <body>
@@ -49,13 +51,13 @@
             </li>
             <li class="active">
                 <a href="/tabel">
-                    <i class="fas fa-tachometer-alt"></i>
+                    <i class="fas fa-calendar-plus"></i>
                     <span>Tambah Data</span>
                 </a>
             </li>
             <li>
                 <a href="/pesan">
-                    <i class="fas fa-tachometer-alt"></i>
+                    <i class="fas fa-message"></i>
                     <span>Pesan</span>
                 </a>
             </li>
@@ -86,12 +88,13 @@
                     <form action="" method="post">
                         <div class="mb-3">
                             <label for="formFileMultiple" class="form-label">Massukan Gambar :</label>
+                            <input type="hidden" value="{{data[0]['_id']}}" id="_id">
                             <input class="form-control" type="file" accept=".png,.jpg,.jpeg" name="image"
                                 placeholder="Enter the Image" id="image" required />
                         </div>
                         <br>
                         <div class="mb-3 ">
-                            <button type="submit" onclick="edit()" class="btn btn-success" style="margin-left: 90%;">Submit</button>
+                            <button type="button" onclick="edit()" class="btn btn-success" style="margin-left: 90%;">Submit</button>
                         </div>
                     </form>
                 </div>

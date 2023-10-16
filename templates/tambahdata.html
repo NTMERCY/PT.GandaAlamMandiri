@@ -10,24 +10,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
-    </script>
+        </script>
     <link rel="stylesheet" href="../static/assets (4)/css/dashboard.css">
     <link rel="shortcut icon" href="../static/assets (4)/img/favicon-removebg-preview.png" type="image/x-icon">
 
-    <!-- <script>
-        function tambah() {
-            let image=$('#image').val()
+    <script>
+        function posting() {
 
+            let file = $("#image").prop("files")[0];
+
+            let form_data = new FormData();
+
+            form_data.append("file_give", file);
             $.ajax({
-                type:['POST'],
-                url:'/tambah',
-                data:{},
-                success:function(response){
-                    alert()
-                }
-            })
+                type: "POST",
+                url: "/tambahdataPost",
+                data: form_data,
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    console.log(response);
+                    window.location.href = '/tabel';
+                },
+            });
         }
-    </script> -->
+
+    </script>
 </head>
 
 <body>
@@ -42,13 +50,13 @@
             </li>
             <li class="active">
                 <a href="/tabel">
-                    <i class="fas fa-tachometer-alt"></i>
+                    <i class="fas fa-calendar-plus"></i>
                     <span>Tambah Data</span>
                 </a>
             </li>
             <li>
                 <a href="/pesan">
-                    <i class="fas fa-tachometer-alt"></i>
+                    <i class="fas fa-message"></i>
                     <span>Pesan</span>
                 </a>
             </li>
@@ -84,7 +92,7 @@
                         </div>
                         <br>
                         <div class="mb-3 ">
-                            <button type="submit" onclick="tambah()" class="btn btn-success"
+                            <button type="button" onclick="posting()" class="btn btn-success"
                                 style="margin-left: 90%;">Submit</button>
                         </div>
                     </form>

@@ -25,13 +25,13 @@
             </li>
             <li>
                 <a href="/tabel">
-                    <i class="fas fa-tachometer-alt"></i>
+                    <i class="fa-solid fa-calendar-plus"></i>
                     <span>Tambah Data</span>
                 </a>
             </li>
             <li>
                 <a href="/pesan">
-                    <i class="fas fa-tachometer-alt"></i>
+                    <i class="fa-solid fa-message"></i>
                     <span>Pesan</span>
                 </a>
             </li>
@@ -58,30 +58,14 @@
             </ol>
         </div>
         <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for def in data%} {% set file= def.file%}
             <div class="col">
                 <div class="card">
-                    <img src="https://cdn1-production-images-kly.akamaized.net/on3wzRnO7Y6nWU2u8UlcepDRv7M=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4523494/original/048992400_1690978709-SVOD_-_Spongebob_Squarepants_-_Alt_3_-_Thumbnail.jpg"
-                        class="card-img-top" alt="...">
+                    <img src="../static/{{file}}"
+                        class="card-img-top" >
                 </div>
             </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://cdn1-production-images-kly.akamaized.net/on3wzRnO7Y6nWU2u8UlcepDRv7M=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4523494/original/048992400_1690978709-SVOD_-_Spongebob_Squarepants_-_Alt_3_-_Thumbnail.jpg"
-                        class="card-img-top" alt="...">
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://cdn1-production-images-kly.akamaized.net/on3wzRnO7Y6nWU2u8UlcepDRv7M=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4523494/original/048992400_1690978709-SVOD_-_Spongebob_Squarepants_-_Alt_3_-_Thumbnail.jpg"
-                        class="card-img-top" alt="...">
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://cdn1-production-images-kly.akamaized.net/on3wzRnO7Y6nWU2u8UlcepDRv7M=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4523494/original/048992400_1690978709-SVOD_-_Spongebob_Squarepants_-_Alt_3_-_Thumbnail.jpg"
-                        class="card-img-top" alt="...">
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
     
