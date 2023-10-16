@@ -6,17 +6,50 @@
     <meta name="viewport" content="initial-scale=1, width=device-width">
     <title>PT.GAM - Contact us</title>
     <link rel="shortcut icon" href="../static/assets (4)/img/favicon-removebg-preview.png" type="image/x-icon">
-    <link rel="stylesheet" href="../static/assets (4)/css/contact.css"/>
+    <link rel="stylesheet" href="../static/assets (4)/css/contact.css" />
     <link rel="stylesheet" href="../static/assets (4)/css/global.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+        function tambah() {
+            let name=$('#name').val();
+            let email=$('#email').val();
+            let message=$('#message').val();
+            console.log(name,email,message);
+
+            $.ajax({
+                type:'POST',
+                url:'/contactus',
+                data:{
+                    name_give:name,
+                    email_give:email,
+                    message_give:message
+                },
+                success:function(response){
+                    alert(response.msg)
+                    window.location.href = '/' 
+                }
+            })
+        }
+    </script>
 </head>
 
 <body>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+        AOS.init();
     </script>
 
     <div class="contact-us">
@@ -26,17 +59,17 @@
                 width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        
+
         <div class="container-contact-us">
             <form action="#" method="post">
-                <h2>Contact  us</h2>
+                <h2>Contact us</h2>
                 <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name"><br>
                 <label for="email">Email:</label><br>
                 <input type="email" id="email" name="email"><br>
                 <label for="message">Message:</label><br>
                 <textarea id="message" name="message"></textarea><br>
-                <input type="submit" value="Submit">
+                <button type="submit" onclick="tambah()" class="btn btn-primary">Submit</button>
             </form>
         </div>
 
@@ -130,7 +163,8 @@
                 </div>
             </div>
             <div class="rectangle-parent2">
-                <img class="frame-item" alt="" src="../static/assets (4)/drive-download-20230910T075804Z-001/asset 9.png">
+                <img class="frame-item" alt=""
+                    src="../static/assets (4)/drive-download-20230910T075804Z-001/asset 9.png">
 
                 <div class="pacific-century-place-container1">
                     <p class="pacific-century-place">Pacific Century Place ID-</p>
@@ -145,7 +179,8 @@
             <div class="jakarta-office">JAKARTA OFFICE</div>
             <div class="mine-site">MINE SITE</div>
             <div class="rectangle-parent3">
-                <img class="frame-item" alt="" src="../static/assets (4)/drive-download-20230910T075804Z-001/asset 10.png">
+                <img class="frame-item" alt=""
+                    src="../static/assets (4)/drive-download-20230910T075804Z-001/asset 10.png">
 
                 <div class="vv9fvh-sempayau-kec">4VV9+FVH, Sempayau, Kec. Sangkulirang, Kabupaten Kutai Timur,
                     Kalimantan Timur 75684</div>
