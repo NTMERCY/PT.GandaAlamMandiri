@@ -51,18 +51,20 @@ def tabel():
 
 @app.route('/pesan')
 def pesan():
-    return render_template('pesan.html')
+    data=db.msg.find({})
+
+    return render_template('pesan.html',data=data)
 
 @app.route('/tambahdata')
 def tambahdata():
     return render_template('tambahdata.html')
 
-@app.route('/contactus',methods=['POST'])
+@app.route('/contactusPost', methods=['POST'])
 def tambah():
     name=request.form.get('name_give')
     email=request.form.get('email_give')
-    message=request.form.get('message_give')
-    print(name,email,message)
+    message = request.form.get('message_give')
+
 
     doc={
         'name':name,
@@ -70,10 +72,8 @@ def tambah():
         'message':message,
     }
 
-    db.buah.insert_one(doc)
-    return jsonify({
-        'msg':'berhasil terkirim!'
-    })
+    db.msg.insert_one(doc)
+    return jsonify({ 'msg':'berhasil terkirim!' })
 
 if __name__=='__main__':
     app.run('0.0.0.0',port=5000, debug=True)

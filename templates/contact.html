@@ -28,18 +28,21 @@
             let email=$('#email').val();
             let message=$('#message').val();
             console.log(name,email,message);
+            let form_data = new FormData();
+
+            form_data.append("name_give", name);
+            form_data.append("email_give", email);
+            form_data.append("message_give", message);
 
             $.ajax({
                 type:'POST',
-                url:'/contactus',
-                data:{
-                    name_give:name,
-                    email_give:email,
-                    message_give:message
-                },
+                url:'/contactusPost',
+                data: form_data,
+                contentType: false,
+                processData: false,
                 success:function(response){
                     alert(response.msg)
-                    window.location.href = '/' 
+                    window.location.reload() 
                 }
             })
         }
@@ -69,7 +72,7 @@
                 <input type="email" id="email" name="email"><br>
                 <label for="message">Message:</label><br>
                 <textarea id="message" name="message"></textarea><br>
-                <button type="submit" onclick="tambah()" class="btn btn-primary">Submit</button>
+                <button type="button" onclick="tambah()" class="btn btn-primary">Submit</button>
             </form>
         </div>
 

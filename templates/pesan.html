@@ -44,6 +44,7 @@
         </ul>
     </div>
 
+
     <div class="main-content">
         <div class="header-wrapper">
             <div class="header-title">
@@ -63,13 +64,15 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {% for def in data%} {% set name= def.name%}{% set email= def.email%}{% set message=
+                        def.message%}{% set _id= def._id%}
+
                         <tr>
-                            <td><img src="" alt="">Gambar</td>
-                            <td>naufal@gmail.com</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nisi suscipit non qui 
-                                repellat eaque, accusantium eius iure facere placeat nemo rerum quod officiis pariatur 
-                                asperiores fuga laboriosam iste molestiae!</td>
+                            <td>{{name}}</td>
+                            <td>{{email}}</td>
+                            <td>{{message}}</td>
                         </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
