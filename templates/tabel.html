@@ -16,7 +16,7 @@
                 alert("Now deleting");
                 return true;
                 let id = $("#_id").val();
-                
+
                 let form_data = new FormData();
 
                 form_data.append("id_give", id);
@@ -110,8 +110,11 @@
                                             <button type="button" class="btn btn-success btn-sm"><i
                                                     class="fa solid fa-calendar-alt"></i></button>
                                         </a>
-                                        <button type="button" class="btn btn-danger btn-sm"><i
-                                                class="fa solid fa-trash-alt" onclick="confirmDelete()"></i></button>
+                                        <a href="/deletePhoto?_id={{_id}}">
+                                            <button type="button" class="btn btn-danger btn-sm"><i
+                                                    class="fa solid fa-trash-alt"
+                                                    onclick="confirmDelete()"></i></button>
+                                        </a>
                                     </td>
                                 </tr>
                                 {% endfor %}

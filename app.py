@@ -5,13 +5,15 @@ from datetime import datetime
 from bson import ObjectId
 
 app = Flask(__name__)
+app.secret_key = 'secretkey'
 
 client=MongoClient('mongodb+srv://test:sparta@cluster0.qpc2myf.mongodb.net/?retryWrites=true&w=majority')
-db=client.profil
+db=client.profil    
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    data = list(db.pict.find({}).sort('_id',-1))
+    return render_template('index.html',data=data)
 
 @app.route('/history')
 def history():
@@ -34,26 +36,35 @@ def gallery():
 def contactus():
     return render_template('contact.html')
 
-@app.route('/login',methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST': 
+@app.route('/login', methods=['GET', 'POST'])
+def admin_login():
+    if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
 
-        if username == 'admin' and password == 'admin':
-            session['username'] = username
-            return redirect(url_for('/dashboard'))
+        admin = db.admins.find_one({'username': username, 'password': password})
+
+        if admin:
+            session['admin_id'] = str(admin['_id'])
+            return redirect(url_for('admin_dashboard'))
         else:
-            return render_template('login.html')
-    else:
-        return render_template('login.html')
+            error = 'Invalid login credentials'
+            return render_template('login.html', error=error)
+
+    return render_template('login.html')
+
     
-
-
 @app.route('/dashboard')
-def dashboard():
-    data = list(db.pict.find({}).sort('_id',-1))
-    return render_template('dashboard.html',data=data)
+def admin_dashboard():
+    if 'admin_id' in session:
+        return render_template('dashboard.html')
+    else:
+        return redirect(url_for('admin_login'))
+    
+@app.route('/logout')
+def admin_logout():
+    session.pop('admin_id', None)
+    return redirect(url_for('login.html'))
 
 @app.route('/editdata')
 def editdata():
@@ -130,13 +141,14 @@ def tambah():
     db.msg.insert_one(doc)
     return jsonify({ 'msg':'berhasil terkirim!' })
 
-@app.route('/deletePhoto', methods=['POST'])
+@app.route('/deletePhoto', methods=['GET'])
 def delete_photo():
     #mengambil id dari sisi client
-    id = request.form.get('id_give')
+    id = request.args.get('_id')
     #menghapus foto berdasarkan foto yang dippilih dengan menggunakan id pada foto tersebut
     db.pict.delete_one({'_id':ObjectId(id)})
-    return jsonify({'msg':'Foto berhasil dihaopus!'})
+    data=list(db.pict.find({}))
+    return render_template('tabel.html',data=data)
 
 if __name__=='__main__':
     app.run('0.0.0.0',port=5000, debug=True)
