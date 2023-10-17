@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, render_template, request, jsonify
+from flask import Flask, redirect, url_for, render_template, request, jsonify, session
 from pymongo import MongoClient
 import requests
 from datetime import datetime
@@ -34,9 +34,21 @@ def gallery():
 def contactus():
     return render_template('contact.html')
 
-@app.route('/login')
+@app.route('/login',methods=['GET', 'POST'])
 def login():
-    return render_template('login.html')
+    if request.method == 'POST': 
+        username = request.form['username']
+        password = request.form['password']
+
+        if username == 'admin' and password == 'admin':
+            session['username'] = username
+            return redirect(url_for('/dashboard'))
+        else:
+            return render_template('login.html')
+    else:
+        return render_template('login.html')
+    
+
 
 @app.route('/dashboard')
 def dashboard():
