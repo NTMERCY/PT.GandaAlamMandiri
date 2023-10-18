@@ -37,32 +37,34 @@ def contactus():
     return render_template('contact.html')
 
 @app.route('/login', methods=['GET', 'POST'])
-def admin_login():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
+def login():
+    # if request.method == 'POST':
+    #     username = request.form['username']
+    #     password = request.form['password']
 
-        admin = db.admins.find_one({'username': username, 'password': password})
+    #     admin = db.admins.find_one({'username': username, 'password': password})
 
-        if admin:
-            session['admin_id'] = str(admin['_id'])
-            return redirect(url_for('admin_dashboard'))
-        else:
-            error = 'Invalid login credentials'
-            return render_template('login.html', error=error)
+    #     if admin:
+    #         session['admin_id'] = str(admin['_id'])
+    #         return redirect(url_for('/dashboard'))
+    #     else:
+    #         error = 'Invalid login credentials'
+    #         return render_template('login.html', error=error)
 
     return render_template('login.html')
 
     
 @app.route('/dashboard')
-def admin_dashboard():
-    if 'admin_id' in session:
-        return render_template('dashboard.html')
-    else:
-        return redirect(url_for('admin_login'))
+def dashboard():
+    # if 'admin_id' in session:
+    #     return render_template('dashboard.html')
+    # else:
+    #     return redirect(url_for('login'))
+    data = list(db.pict.find({}).sort('_id',-1))
+    return render_template('dashboard.html',data=data)
     
 @app.route('/logout')
-def admin_logout():
+def logout():
     session.pop('admin_id', None)
     return redirect(url_for('login.html'))
 
