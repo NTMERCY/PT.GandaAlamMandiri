@@ -72,7 +72,10 @@ def logout():
 def editdata():
     id =request.args.get('_id')
     data=list(db.pict.find({'_id' : ObjectId(id)}))
-    return render_template('editdata.html', data=data)
+    if 'username' in session:
+        return render_template('editdata.html',data=data)
+    else:
+        return redirect(url_for('login'))
 
 @app.route('/editdata', methods=['POST'])
 def editPost():
@@ -113,7 +116,10 @@ def pesan():
 
 @app.route('/tambahdata')
 def tambahdata():
-    return render_template('tambahdata.html')
+    if 'username' in session:
+        return render_template('tambahdata.html')
+    else:
+        return redirect(url_for('login'))
 
 @app.route('/tambahdataPost', methods=['POST'])
 def tambahdataPost():
