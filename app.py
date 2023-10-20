@@ -1,14 +1,15 @@
 from flask import Flask, redirect, url_for, render_template, request, jsonify, session
 from pymongo import MongoClient
 import requests
-from datetime import datetime
+from datetime import datetime, timedelta
 from bson import ObjectId
 
 app = Flask(__name__)
 app.secret_key = 'secretkey'
 
 client=MongoClient('mongodb+srv://test:sparta@cluster0.qpc2myf.mongodb.net/?retryWrites=true&w=majority')
-db=client.profil    
+db=client.profil  
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=1)  
 
 @app.route('/')
 def home():
@@ -36,37 +37,36 @@ def gallery():
 def contactus():
     return render_template('contact.html')
 
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    # if request.method == 'POST':
-    #     username = request.form['username']
-    #     password = request.form['password']
+    if request.method == 'POST':
+        # Mengambil data dari form
+        username = request.form.get('username')
+        password = request.form.get('password')
 
-    #     admin = db.admins.find_one({'username': username, 'password': password})
-
-    #     if admin:
-    #         session['admin_id'] = str(admin['_id'])
-    #         return redirect(url_for('/dashboard'))
-    #     else:
-    #         error = 'Invalid login credentials'
-    #         return render_template('login.html', error=error)
+        # Melakukan pengecekan login
+        if username == 'admin' and password == 'password':
+            session.permanent = True  # Mengatur sesi menjadi permanen (24 jam)
+            session['username'] = username
+            return redirect(url_for('dashboard'))
+        else:
+            return render_template('login.html', error='Username atau password salah')
 
     return render_template('login.html')
-
-    
+  
 @app.route('/dashboard')
-def dashboard():
-    # if 'admin_id' in session:
-    #     return render_template('dashboard.html')
-    # else:
-    #     return redirect(url_for('login'))
+def dashboard():     
     data = list(db.pict.find({}).sort('_id',-1))
-    return render_template('dashboard.html',data=data)
+    if 'username' in session:
+        return render_template('dashboard.html',data=data)
+    else:
+        return redirect(url_for('login'))
     
 @app.route('/logout')
 def logout():
-    session.pop('admin_id', None)
-    return redirect(url_for('login.html'))
+    session.pop('username', None)
+    return redirect(url_for('login'))
 
 @app.route('/editdata')
 def editdata():
@@ -95,15 +95,21 @@ def editPost():
 
 
 @app.route('/tabel',methods=['GET'])
-def tabel():
-    data = list(db.pict.find({}).sort('_id',-1))
-    return render_template('tabel.html',data=data)
-
+def tabel(): 
+    if 'username' in session:
+        data = list(db.pict.find({}).sort('_id',-1))
+        return render_template('tabel.html',data=data)
+    else: 
+        return redirect(url_for('login'))
+        
 @app.route('/pesan')
 def pesan():
-    data=db.msg.find({})
+    if 'username' in session:
+        data=db.msg.find({})
+        return render_template('pesan.html',data=data)
+    else :
+        return redirect(url_for('login'))
 
-    return render_template('pesan.html',data=data)
 
 @app.route('/tambahdata')
 def tambahdata():

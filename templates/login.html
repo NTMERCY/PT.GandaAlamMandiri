@@ -12,7 +12,31 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
 
+  <script>
+    function login() {
+      let username = $('#username').val();
+      let password = $('#password').val();
+      console.log(username, password);
+
+      let form_data = new FormData();
+
+      form_data.append("username", username);
+      form_data.append("password", password);
+
+      $.ajax({
+        type: 'POST',
+        data: form_data,
+        contentType: false,
+        processData: false,
+        success: function (response) {
+          window.location.href = "/dashboard"
+        }
+      })
+    }
+  </script>
 </head>
 
 <body>
@@ -26,11 +50,12 @@
           <form method="POST">
             <div class="login-form" method="POST" id="login-form">
               <label for="username" class="form-label">Username</label>
-              <input type="text" class="form-control" name="username" placeholder="Enter your username">
+              <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username">
 
               <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control" name="password" placeholder="Enter your password">
-              <button type="submit" class="signin">Login</button>
+              <input type="password" class="form-control" id="password" name="password"
+                placeholder="Enter your password">
+              <button type="button" onclick="login()" class="signin">Login</button>
             </div>
           </form>
         </div>
